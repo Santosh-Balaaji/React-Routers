@@ -7,7 +7,7 @@ const NavBar =(props)=>{
         props.history.push('/about') //props.history can be used only inside a single component and cannot be accessed here. Higher ORder components are used to make props use history properties over here.
     },2000);
     return (
-        <nav className="nav-wrapper read darken-3">
+        <nav className="nav-wrapper red darken-3">
         <div className="container">
         <a className = "brand-logo">Poke'Times</a>
         <ul className ="right">
