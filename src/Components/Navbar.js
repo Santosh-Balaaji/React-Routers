@@ -3,9 +3,9 @@ import {Link, NavLink, withRouter} from 'react-router-dom'  // use the Link and 
 // WithRouter is the higher order component used to provide additional functionality in this case adding the history to props over here. 
 const NavBar =(props)=>{
     console.log(props)
-    setTimeout(()=>{
+   /* setTimeout(()=>{
         props.history.push('/about') //props.history can be used only inside a single component and cannot be accessed here. Higher ORder components are used to make props use history properties over here.
-    },2000);
+    },2000);*/
     return (
         <nav className="nav-wrapper red darken-3">
         <div className="container">
