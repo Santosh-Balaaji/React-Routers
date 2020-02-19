@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 //import axios from 'axios'; 
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 
 class Home extends Component{
@@ -18,7 +18,9 @@ class Home extends Component{
     }*/
 
     render(){
-        const {posts} =this.state;
+    console.log(this.props);
+
+        const {posts} =this.props;
         const postList = posts.length?(
             posts.map(post=>{
                 return(
@@ -49,8 +51,7 @@ class Home extends Component{
 const mapStatetoProps =(state)=>{  //the state refers to the state of the store
 return {
     posts: state.posts
-
 }
 
 }
-export default connect()(Home);
+export default connect(mapStatetoProps)(Home);
