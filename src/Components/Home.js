@@ -1,12 +1,13 @@
 import React,{Component} from 'react';
-import axios from 'axios'; 
+//import axios from 'axios'; 
+import {connect} from 'react-redux';
 
 
 class Home extends Component{
-    state={
+    /*state={
         posts:[ ]
-    }
-    componentDidMount(){
+    }*/
+    /*componentDidMount(){
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(res =>{
             console.log(res);
@@ -14,7 +15,8 @@ class Home extends Component{
                 posts: res.data.slice(0,10)
           })
      })
-    }
+    }*/
+
     render(){
         const {posts} =this.state;
         const postList = posts.length?(
@@ -44,5 +46,11 @@ class Home extends Component{
 }
 
 }
+const mapStatetoProps =(state)=>{  //the state refers to the state of the store
+return {
+    posts: state.posts
 
-export default Home;
+}
+
+}
+export default connect()(Home);
